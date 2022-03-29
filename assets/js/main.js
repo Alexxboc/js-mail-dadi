@@ -47,19 +47,15 @@ Prima di partire a scrivere codice poniamoci qualche domanda: Che ci sia un arra
 
 // Crea una lista con i numeri
 const numbers = [1, 2, 3, 4, 5, 6];
+console.log(numbers);
 
 // Scegli un numero casuale per l'utente
-const user_number = Math.ceil(Math.random() * 5 + 1);
+const user_number = Math.floor(Math.random()* numbers.length + 1);
 console.log(user_number);
 
 // Scegli un numero casuale per il computer
-const computer_number = Math.ceil(Math.random() * 5 + 1);
+const computer_number = Math.floor(Math.random()* numbers.length + 1);
 console.log(computer_number);
-
-// // Crea un ciclo con la lista di numeri
-// for(let i = 0; i <= numbers.length - 1; i++){
-//     // console.log(numbers[i]);
-
 
 // Controlla chi ha vinto
     if(user_number > computer_number) {
