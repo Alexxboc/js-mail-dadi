@@ -27,7 +27,7 @@ Chiedi all’utente la sua email, controlla che sia nella lista di chi può acce
 
 //     if(email === askMail){
 // // Stampa il messaggio positivo in console
-//     // console.log(`La mail è presente nella lista`);
+//    
 //     succes = true;
 //     } else {
 // // Stampa il messaggio negativo in console
@@ -84,39 +84,62 @@ BONUS: Usiamo un input e un bottone per inserire la mail e poi mostriamo i risul
 
 */
 
-// // Creare una lista di e-mail
-// const mails = ['boccardi.alessandro@gmail.com', 'antonellariccio84@gmail.com', 'g.glamour.it@gmail.com', 'info@gglamour.it'];
+// Creare una lista di e-mail
+const listMail = ['boccardi.alessandro@gmail.com', 'antonellariccio84@gmail.com', 'g.glamour.it@gmail.com', 'info@gglamour.it'];
 
-// // Seleziona il bottone nell'htmnl
-// const button = document.querySelector('.btn')
+// Seleziona il bottone nell'htmnl
+const button = document.querySelector('.btn')
 
-// // Crea un evento di submit
+// Seleziona l'elemento contenitore
+const resultElement = document.querySelector('.result')
 
-// button.addEventListener (`click`, 
-// function(){
-//     console.log(`click`)
-// // Estrapola il "Valore Email" dall'input
-//     const Email = document.getElementById(`email`).value;
+// Crea una varibaile con valore booleano false
 
-// // Crea un ciclo for con la lista delle mail
-//     for(let i = 0; i < mails.length; i++){
+let succes = false;
 
-// // Crea una variabile per ogni singola mail della lista
-//         let listMail = mails[i];
+// Dichiara una variabile per il markup
 
-// // Controlla che la mail sia inclusa nella lista
-//         if(Email === listMail) {
+let markup;
 
-// // Stampa il risultato
-//         console.log(`La mail ${Email} è presente nella lista`); 
+// Crea un evento di submit
 
-//         } else {
-// // Stampa il risultato
-//         console.log(`La mail ${Email} non è presente nella lista`); 
-//         }
-//     }
+button.addEventListener (`click`, 
+function(){
+    console.log(`click`)
+// Estrapola il "Valore Email" dall'input
+    const user_email = document.getElementById(`email`).value;
 
-// })
+// Crea un ciclo for con la lista delle mail
+    for(let i = 0; i < listMail.length; i++){
 
+// Crea una variabile per ogni singola mail della lista
+        let email = listMail[i];
+
+// Controlla che la mail sia inclusa nella lista
+        if(user_email === email) {
+// Attribuisici la variabile con valore true
+            succes = true;
+
+        } else {
+            
+        }
+    }
+
+    if(succes) {
+        markup = 
+        `
+        <h2 class="title">La mail ${user_email} è presente nella lista</h2>
+        `
+        resultElement.insertAdjacentHTML("beforeend",markup)
+    } else {
+        markup = 
+        `
+        <h2 class="title">La mail ${user_email}  NON è presente nella lista</h2>
+        `
+        resultElement.insertAdjacentHTML("beforeend",markup)
+    }
+    
+
+})
 
 
