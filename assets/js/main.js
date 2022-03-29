@@ -6,33 +6,42 @@ Chiedi all’utente la sua email, controlla che sia nella lista di chi può acce
 
 
 
-// Creare una lista di e-mail
-const mailList = ['boccardi.alessandro@gmail.com', 'antonellariccio84@gmail.com', 'g.glamour.it@gmail.com', 'info@gglamour.it'];
+// // Creare una lista di e-mail
+// const mailList = ['boccardi.alessandro@gmail.com', 'antonellariccio84@gmail.com', 'g.glamour.it@gmail.com', 'info@gglamour.it'];
 
-// Chiedere la mail all'utente
-const askMail = prompt(`Type your e-mail`);
+//  // Chiedere la mail all'utente
+//  const askMail = prompt(`Type your e-mail`);
 
-// Crea un ciclo for con la lista delle mail
+// // Crea un ciclo for con la lista delle mail
 
-for(let i = 0; i < mailList.length; i++){
-    // console.log(mails[i]);
+// let succes = false;
 
-// Crea una variabile per ogni singola mail
-    let email = mailList[i];
-    // console.log(mail);
+// for(let i = 0; i < mailList.length; i++){
+//     console.log(mailList[i]);
 
-// Controlla che la mail sia inclusa nella lista
+// // Crea una variabile per ogni singola mail
+//     let email = mailList[i];
+//     // console.log(mail);
 
-    if(email === askMail){
-// Stampa il messaggio positivo in console
-    console.log(`La mail è presente nella lista`);
-    } else {
-// Stampa il messaggio negativo in console
-    console.log(`La mail non è presente nella lista`);
-    }
+// // Controlla che la mail sia inclusa nella lista
 
+//     if(email === askMail){
+// // Stampa il messaggio positivo in console
+//     // console.log(`La mail è presente nella lista`);
+//     succes = true;
+//     } else {
+// // Stampa il messaggio negativo in console
+//     // console.log(`La mail non è presente nella lista`);
+//     }
+// }
 
-}
+// console.log(succes);
+
+// if(succes){
+//     console.log(`La mail è presente nella lista`);
+// } else {
+//     console.log(`La mail non è presente nella lista`);
+// }
 
 
 
